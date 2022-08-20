@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+$gradient-very-lightred: hsl(13, 100%, 72%);
+$gradient-lightred: hsl(353, 100%, 62%);
+$gradient-darkgrayblue-body: hsl(237, 17%, 21%);
+$gradient-darksaturatedblue-body: hsl(237, 23%, 32%);
+$overpass-font: 'Overpass', sans-serif;
+$ubuntu-font: 'Ubuntu', sans-serif;
+$cta-text: hsl(356, 100%, 66%);
+$cta-hover-bg: hsl(355, 100%, 74%);
+$heading-text-color: hsl(208, 49%, 24%);
+$body-text-color: hsl(207, 13%, 34%);
+$footer-background: hsl(240, 10%, 16%);
+$footer-text-color: hsl(240, 2%, 79%);
+
+@mixin center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.illustration-desktop{display: none;}
+
+#container
+{
+    header
+    {
+        display: flex;
+        border-radius: 0 0 0 6em;
+        flex-flow: column;
+        position: relative;
+        background-image: linear-gradient(145deg, $gradient-very-lightred, $gradient-lightred);
+        height: 600px;
+        overflow: hidden;
+        z-index: 1;
+        gap: 7em;
+        padding: 3em 1em;
+
+        .mobile-bkg
+        {
+            display: block;
+            position: absolute;
+            top: -255px;
+            left: -340px;
+            z-index: -1;
+        }
+        .desktop-bkg{display: none;}
+
+        nav
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .nav-menu
+            {
+                position: fixed;
+                display: block;
+                background: white;
+                border-radius: 6px;
+                box-shadow: 0 12px 24px 2px hsla(0 0% 50% / 0.5);
+                font-family: $overpass-font;
+                width: 90%;
+                top: 110px; 
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 250ms ease, visibility 250ms ease;
+                padding: 2em 0;
+
+                &.active
+                {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                #menu-options
+                {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    gap: 1em;
+
+                    .menu-header
+                    {
+                        @include center;
+                        gap: 5px;
+
+                        h1{
+                            font-size: 16px;
+                            color: $heading-text-color;
+                        }
+                    }
+
+                    .submenu-options
+                    {
+                        display: flex;
+                        flex-flow: column;
+                        gap: 1em;
+                        text-align: center;
+                        background: #eee6e6;
+                        width: 85%;
+                        border-radius: 6px;
+                        padding: 1.5em 0;
+                        font-weight: 600;
+                        color: $body-text-color;
+                    }
+                }
+            }
+            
+            #hamburger-open
+            {
+                display: block;
+                opacity: 1;
+                visibility: 1;
+                transition: opacity 250ms ease, visibility 250ms ease;
+                &.active
+                {
+                    display: none;
+                    opacity: 0;
+                    visibility: 0;
+                }
+            }
+
+            #hamburger-close
+            {
+                display: none;
+                opacity: 0;
+                visibility: 0;
+                transition: opacity 250ms ease, visibility 250ms ease;
+                &.active
+                {
+                    display: block;
+                    opacity: 1;
+                    visibility: 1;
+                }
+            }
+        }
+
+        #message
+        {
+            h1, p
+            {
+                text-align: center;
+                font-family: $overpass-font;
+                color: white;
+            }
+
+            h1
+            {
+                font-weight: 600;
+                letter-spacing: -0.5px;
+                margin-bottom: 0.5em;
+            }
+
+            #cta
+            {
+                @include center;
+                padding: 1em;
+                gap: 16px;
+                font-family: $ubuntu-font;
+                margin-top: 2em;
+
+                a
+                {
+                    @include center;
+                    text-decoration: none;
+                    border-radius: 32px;
+                    width: 137px;
+                    height: 48px;
+                    font-weight: 500;
+
+                    &:nth-child(1)
+                    {
+                        color: $cta-text;
+                        background: white;
+                        transition: color 200ms ease, background 250ms ease;
+                    }
+
+                    &:hover:nth-child(1)
+                    {
+                        background: $cta-hover-bg;
+                        color: white;
+                    }
+
+                    &:nth-child(2)
+                    {
+                        color: white;
+                        border: 1px solid white;
+                        transition: color 200ms ease, background 250ms ease;
+                    }
+
+                    &:hover:nth-child(2)
+                    {
+                        background: white;
+                        color: $cta-text;
+                    }
+                }
+            }
+        }
+    }
+
+    section
+    {
+        text-align: center;
+        font-family: $overpass-font;
+        font-weight: 300;
+    }
+
+    #first__section
+    {
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        padding: 6.44em 0 0 0;
+        // height: 1459px;
+        height: 1345px;
+
+        h2
+        {
+            color: $heading-text-color;
+        }
+
+        p
+        {
+            color: $body-text-color;
+        }
+
+        #first__section__body
+        {
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            gap: 2em;
+
+
+            .illustration-mobile
+            {
+                max-width: 100%;
+            }
+
+            #first__section__body__text
+            {
+                display: flex;
+                flex-flow: column;
+                gap: 3em;
+                .body__text
+                {
+                    @include center;
+                    flex-flow: column;
+                    gap: 1em;
+                    h2
+                    {
+                        max-width: 12ch;
+                    }
+
+                    p
+                    {
+                        max-width: 30ch;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
+
+    #second__section
+    {
+        @include center;
+        flex-flow: column;
+        height: 625px;
+        position: relative;
+        background-image: linear-gradient($gradient-darkgrayblue-body, $gradient-darksaturatedblue-body);
+        border-radius: 0 6em 0 6em;
+        z-index: 1;
+
+        #phone-illustration
+        {
+            position: absolute;
+            top: -185px;
+            max-width: 100%;
+            z-index: 0;
+        }
+
+        #bg-circle-pattern-container
+        {
+            @include center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0 6em 0 6em;
+            overflow: hidden;
+            z-index: -1;
+            #bg-circle-pattern
+            {
+                position: absolute;
+                top: -230px;
+                $bg-circle-width: 600px;
+                width: $bg-circle-width;
+                height: calc($bg-circle-width + 4px);
+            }
+        }
+
+        #second__section__body__text
+        {
+            z-index: 1;
+            .body__text
+            {
+                @include center;
+                flex-flow: column;
+                gap: 1em;
+                padding-top: 7em;
+                h2
+                {
+                    max-width: 12ch;
+                    color: white;
+                    font-weight: 300;
+                    font-size: 40px; 
+                }
+
+                p
+                {
+                    max-width: 30ch;
+                    line-height: 1.6;
+                    color: white;
+                    font-weight: 300;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    #third__section
+    {
+        padding: 64px 0 90px 0;
+
+        h2
+        {
+            color: $heading-text-color;
+        }
+
+        p
+        {
+            color: $body-text-color;
+        }
+
+        #third__section__body
+        {
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            gap: 2em;
+
+            #third__section__body__text
+            {
+                display: flex;
+                flex-flow: column;
+                gap: 3em;
+                .body__text
+                {
+                    @include center;
+                    flex-flow: column;
+                    gap: 2em;
+                    h2
+                    {
+                        max-width: 13ch;
+                    }
+
+                    p
+                    {
+                        max-width: 29ch;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
+
+    footer
+    {
+        @include center;
+        flex-flow: column;
+        gap: 4em;
+        background: $footer-background;
+        border-radius: 0 6em 0 0;
+        padding: 65.5px 0;
+
+        h1, p{text-align: center;}
+        h1
+        {
+            color: white;
+            font-family: $ubuntu-font;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        p
+        {
+            color: $footer-text-color;
+            font-family: $overpass-font;
+            font-size: 20px;
+        }
+
+        .footer__section
+        {
+            display: flex;
+            flex-flow: column;
+            gap: 32px;
+
+            .links
+            {
+                display: flex;
+                flex-flow: column;
+                gap: 8px;
+            }
+        }
+    }
+}
