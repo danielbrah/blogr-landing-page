@@ -76,6 +76,13 @@
   font-size: 16px;
   color: hsl(208deg, 49%, 24%);
 }
+#container header nav .nav-menu #menu-options #menu-header img {
+  transform: rotate(0deg);
+  transition: transform 250ms ease;
+}
+#container header nav .nav-menu #menu-options #menu-header img.active {
+  transform: rotate(180deg);
+}
 #container header nav .nav-menu #menu-options #submenu-option {
   display: flex;
   justify-content: center;
@@ -95,7 +102,6 @@
 }
 #container header nav .nav-menu #menu-options #submenu-option.active {
   height: var(--height);
-  padding: 1em 0;
 }
 #container header nav #hamburger-open {
   display: block;

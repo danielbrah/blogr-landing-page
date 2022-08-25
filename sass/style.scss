@@ -103,6 +103,17 @@ $footer-text-color: hsl(240, 2%, 79%);
                             font-size: 16px;
                             color: $heading-text-color;
                         }
+
+                        img
+                        {
+                            transform: rotate(0deg);
+                            transition: transform 250ms ease;
+
+                            &.active
+                            {
+                                transform: rotate(180deg);
+                            }
+                        }
                     }
 
                     #submenu-option
@@ -124,7 +135,6 @@ $footer-text-color: hsl(240, 2%, 79%);
                         &.active
                         {
                             height: var(--height);
-                            padding: 1em 0;
                         }
                     }
                 }
