@@ -13,7 +13,7 @@ window.addEventListener('scroll', (event) =>{
     if (window.scrollY == 0 || window.scrollY < 0)
         navSection.style.backgroundColor = 'transparent'
     else
-        navSection.style.backgroundColor = 'hsl(13, 93%, 59%)'
+        navSection.style.backgroundColor = 'hsl(353, 100%, 62%)'
 })
 
 hamburgerOpen.addEventListener("click", () => 
