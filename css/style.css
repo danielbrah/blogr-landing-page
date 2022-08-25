@@ -13,6 +13,9 @@
   display: none;
 }
 
+#container {
+  overflow: scroll;
+}
 #container header {
   display: flex;
   border-radius: 0 0 0 6em;
@@ -21,9 +24,9 @@
   background-image: linear-gradient(145deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   height: 600px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
   gap: 7em;
-  padding: 3em 1em;
+  padding: 12.5em 1em;
 }
 #container header .mobile-bkg {
   display: block;
@@ -39,6 +42,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3em 1em;
+  transition: background-color 150ms ease;
+  z-index: 999;
 }
 #container header nav .nav-menu {
   position: fixed;
