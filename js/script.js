@@ -10,7 +10,7 @@ let arrows = document.querySelectorAll('[id=arrow]')
 
 
 window.addEventListener('scroll', (event) =>{
-    if (window.scrollY == 0)
+    if (window.scrollY == 0 || window.scrollY < 0)
         navSection.style.backgroundColor = 'transparent'
     else
         navSection.style.backgroundColor = 'hsl(13, 93%, 59%)'
