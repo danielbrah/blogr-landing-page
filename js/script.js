@@ -12,7 +12,6 @@ hamburgerOpen.addEventListener("click", () =>
     navMenu.classList.toggle('active')
     hamburgerOpen.classList.toggle('active')
     hamburgerClose.classList.toggle('active')
-    document.body.style.overflow = 'hidden'
     container.style.overflow = 'hidden'
 })
 
@@ -21,7 +20,6 @@ hamburgerClose.addEventListener("click", () =>
     navMenu.classList.toggle('active')
     hamburgerOpen.classList.toggle('active')
     hamburgerClose.classList.toggle('active')
-    document.body.removeAttribute('style')
     container.removeAttribute('style')
 })
 
