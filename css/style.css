@@ -46,9 +46,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3em 1em 2em 1em;
+  padding: 3em 1em 1.5em 1em;
   transition: background-color 150ms ease;
   z-index: 999;
+  border-radius: 0 0 1.5em 1.5em;
 }
 #container header nav .nav-menu {
   position: fixed;
@@ -58,17 +59,20 @@
   box-shadow: 0 12px 24px 2px hsla(0deg, 0%, 50%, 0.5);
   font-family: "Overpass", sans-serif;
   width: 90%;
-  top: 110px;
+  max-height: 76%;
+  overflow: scroll;
+  top: 105px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 250ms ease, visibility 250ms ease;
+  transition: opacity 250ms ease, visibility 250ms ease, top 250ms ease;
   padding: 2em 0;
 }
 #container header nav .nav-menu.active {
   opacity: 1;
   visibility: visible;
+  top: 110px;
 }
 #container header nav .nav-menu #menu-options {
   display: flex;
@@ -83,7 +87,7 @@
   gap: 5px;
 }
 #container header nav .nav-menu #menu-options #menu-header h1 {
-  font-size: 16px;
+  font-size: 18px;
   color: hsl(208deg, 49%, 24%);
 }
 #container header nav .nav-menu #menu-options #menu-header img {
@@ -98,7 +102,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  gap: 1em;
+  gap: 1.2em;
   text-align: center;
   background: #eee6e6;
   width: 85%;
@@ -112,6 +116,29 @@
 }
 #container header nav .nav-menu #menu-options #submenu-option.active {
   height: var(--height);
+  padding: 4.5em 0;
+}
+#container header nav .nav-menu #menu-options .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 1.25em;
+  border-top: 1px solid grey;
+  padding-top: 2em;
+  margin-top: 1em;
+  width: 85%;
+}
+#container header nav .nav-menu #menu-options .buttons a {
+  text-decoration: none;
+  color: hsl(208deg, 49%, 24%);
+  font-weight: 600;
+}
+#container header nav .nav-menu #menu-options .buttons a:nth-child(2) {
+  color: white;
+  background: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  padding: 0.7em 2em;
+  border-radius: 32px;
 }
 #container header nav #hamburger-open {
   display: block;

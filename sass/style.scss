@@ -69,9 +69,10 @@ $footer-text-color: hsl(240, 2%, 79%);
             top: 0;
             left: 0;
             width: 100%;
-            padding: 3em 1em 2em 1em;
+            padding: 3em 1em 1.5em 1em;
             transition: background-color 150ms ease;
             z-index: 999;
+            border-radius: 0 0 1.5em 1.5em;
             .nav-menu
             {
                 position: fixed;
@@ -81,18 +82,21 @@ $footer-text-color: hsl(240, 2%, 79%);
                 box-shadow: 0 12px 24px 2px hsla(0 0% 50% / 0.5);
                 font-family: $overpass-font;
                 width: 90%;
-                top: 110px; 
+                max-height: 76%;
+                overflow: scroll;
+                top: 105px; 
                 left: 50%;
                 transform: translateX(-50%);
                 opacity: 0;
                 visibility: hidden;
-                transition: opacity 250ms ease, visibility 250ms ease;
+                transition: opacity 250ms ease, visibility 250ms ease, top 250ms ease;
                 padding: 2em 0;
 
                 &.active
                 {
                     opacity: 1;
                     visibility: visible;
+                    top: 110px;
                 }
 
                 #menu-options
@@ -108,7 +112,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                         gap: 5px;
 
                         h1{
-                            font-size: 16px;
+                            font-size: 18px;
                             color: $heading-text-color;
                         }
 
@@ -128,7 +132,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                     {
                         @include center;
                         flex-flow: column;
-                        gap: 1em;
+                        gap: 1.2em;
                         text-align: center;
                         background: #eee6e6;
                         width: 85%;
@@ -143,6 +147,34 @@ $footer-text-color: hsl(240, 2%, 79%);
                         &.active
                         {
                             height: var(--height);
+                            padding: 4.5em 0;
+                        }
+                    }
+
+                    .buttons
+                    {
+                        @include center;
+                        flex-flow: column;
+                        gap: 1.25em;
+                        border-top: 1px solid grey;
+                        padding-top: 2em;
+                        margin-top: 1em;
+                        width: 85%;
+
+                        a
+                        {
+                            text-decoration: none;
+                            color: $heading-text-color;
+                            font-weight: 600;
+                            
+
+                            &:nth-child(2)
+                            {
+                                color: white;
+                                background: linear-gradient(90deg, $gradient-very-lightred, $gradient-lightred);
+                                padding: 0.7em 2em;
+                                border-radius: 32px;
+                            }
                         }
                     }
                 }
