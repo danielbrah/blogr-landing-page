@@ -146,24 +146,24 @@
 #container header #nav-mobile #hamburger-open {
   display: block;
   opacity: 1;
-  visibility: 1;
+  visibility: visible;
   transition: opacity 250ms ease, visibility 250ms ease;
 }
 #container header #nav-mobile #hamburger-open.active {
   display: none;
   opacity: 0;
-  visibility: 0;
+  visibility: hidden;
 }
 #container header #nav-mobile #hamburger-close {
   display: none;
   opacity: 0;
-  visibility: 0;
+  visibility: hidden;
   transition: opacity 250ms ease, visibility 250ms ease;
 }
 #container header #nav-mobile #hamburger-close.active {
   display: block;
   opacity: 1;
-  visibility: 1;
+  visibility: visible;
 }
 #container header #message {
   display: flex;

@@ -189,13 +189,13 @@ $footer-text-color: hsl(240, 2%, 79%);
             {
                 display: block;
                 opacity: 1;
-                visibility: 1;
+                visibility: visible;
                 transition: opacity 250ms ease, visibility 250ms ease;
                 &.active
                 {
                     display: none;
                     opacity: 0;
-                    visibility: 0;
+                    visibility: hidden;
                 }
             }
 
@@ -203,13 +203,13 @@ $footer-text-color: hsl(240, 2%, 79%);
             {
                 display: none;
                 opacity: 0;
-                visibility: 0;
+                visibility: hidden;
                 transition: opacity 250ms ease, visibility 250ms ease;
                 &.active
                 {
                     display: block;
                     opacity: 1;
-                    visibility: 1;
+                    visibility: visible;
                 }
             }
         }
