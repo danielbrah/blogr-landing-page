@@ -104,7 +104,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                     top: 110px;
                 }
 
-                #menu-options
+                .menu-options
                 {
                     display: flex;
                     flex-flow: column;
@@ -116,7 +116,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                         @include center;
                         gap: 5px;
 
-                        h1{
+                        h2{
                             font-size: 18px;
                             color: $heading-text-color;
                         }
@@ -552,7 +552,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                 border-radius: 0 0 1.5em 1.5em;
                 transition: background-color 150ms ease;
 
-                #menu-options
+                .menu-options
                 {
                     display: flex;
                     gap: 2em;
@@ -569,7 +569,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                         position: relative;
                         padding: 8px 0;
 
-                        h1
+                        h2
                         {
                             font-size: 15px;
                             cursor: default;

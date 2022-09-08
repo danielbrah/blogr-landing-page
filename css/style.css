@@ -77,30 +77,30 @@
   visibility: visible;
   top: 110px;
 }
-#container header #nav-mobile .nav-menu #menu-options {
+#container header #nav-mobile .nav-menu .menu-options {
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 1em;
 }
-#container header #nav-mobile .nav-menu #menu-options .menu-header {
+#container header #nav-mobile .nav-menu .menu-options .menu-header {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
-#container header #nav-mobile .nav-menu #menu-options .menu-header h1 {
+#container header #nav-mobile .nav-menu .menu-options .menu-header h2 {
   font-size: 18px;
   color: hsl(208deg, 49%, 24%);
 }
-#container header #nav-mobile .nav-menu #menu-options .menu-header img {
+#container header #nav-mobile .nav-menu .menu-options .menu-header img {
   transform: rotate(0deg);
   transition: transform 250ms ease;
 }
-#container header #nav-mobile .nav-menu #menu-options .menu-header img.active {
+#container header #nav-mobile .nav-menu .menu-options .menu-header img.active {
   transform: rotate(180deg);
 }
-#container header #nav-mobile .nav-menu #menu-options .submenu-option {
+#container header #nav-mobile .nav-menu .menu-options .submenu-option {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,11 +117,11 @@
   transition: height 250ms ease, padding 250ms ease;
   color: hsl(207deg, 13%, 34%);
 }
-#container header #nav-mobile .nav-menu #menu-options .submenu-option.active {
+#container header #nav-mobile .nav-menu .menu-options .submenu-option.active {
   height: var(--height);
   padding: 4.5em 0;
 }
-#container header #nav-mobile .nav-menu #menu-options .buttons {
+#container header #nav-mobile .nav-menu .menu-options .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,12 +132,12 @@
   margin-top: 1em;
   width: 85%;
 }
-#container header #nav-mobile .nav-menu #menu-options .buttons a {
+#container header #nav-mobile .nav-menu .menu-options .buttons a {
   text-decoration: none;
   color: hsl(208deg, 49%, 24%);
   font-weight: 600;
 }
-#container header #nav-mobile .nav-menu #menu-options .buttons a:nth-child(2) {
+#container header #nav-mobile .nav-menu .menu-options .buttons a:nth-child(2) {
   color: white;
   background: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   padding: 0.7em 2em;
@@ -449,7 +449,7 @@
     border-radius: 0 0 1.5em 1.5em;
     transition: background-color 150ms ease;
   }
-  #container header #nav-desktop #menu-options {
+  #container header #nav-desktop .menu-options {
     display: flex;
     gap: 2em;
     flex: 1;
@@ -457,22 +457,22 @@
     font-family: "Overpass", sans-serif;
     margin-left: 1em;
   }
-  #container header #nav-desktop #menu-options .menu-option {
+  #container header #nav-desktop .menu-options .menu-option {
     display: flex;
     align-items: center;
     gap: 0.5em;
     position: relative;
     padding: 8px 0;
   }
-  #container header #nav-desktop #menu-options .menu-option h1 {
+  #container header #nav-desktop .menu-options .menu-option h2 {
     font-size: 15px;
     cursor: default;
   }
-  #container header #nav-desktop #menu-options .menu-option .arrow-light {
+  #container header #nav-desktop .menu-options .menu-option .arrow-light {
     transform: rotate(0deg);
     transition: transform 250ms ease;
   }
-  #container header #nav-desktop #menu-options .menu-option .submenu-option {
+  #container header #nav-desktop .menu-options .menu-option .submenu-option {
     display: flex;
     flex-flow: column;
     gap: 1em;
@@ -490,36 +490,36 @@
     border-radius: 6px;
     box-shadow: 0 8px 16px 5px hsla(0deg, 0%, 50%, 0.5);
   }
-  #container header #nav-desktop #menu-options .menu-option .submenu-option span {
+  #container header #nav-desktop .menu-options .menu-option .submenu-option span {
     cursor: pointer;
     font-weight: 400;
     transition: font-weight 100ms ease;
   }
-  #container header #nav-desktop #menu-options .menu-option .submenu-option span:hover {
+  #container header #nav-desktop .menu-options .menu-option .submenu-option span:hover {
     font-weight: 700;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover .submenu-option {
+  #container header #nav-desktop .menu-options .menu-option:nth-child(1):hover .submenu-option {
     opacity: 1;
     pointer-events: all;
     top: 30px;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover .arrow-light {
+  #container header #nav-desktop .menu-options .menu-option:nth-child(1):hover .arrow-light {
     transform: rotate(180deg);
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover .submenu-option {
+  #container header #nav-desktop .menu-options .menu-option:nth-child(2):hover .submenu-option {
     opacity: 1;
     pointer-events: all;
     top: 30px;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover .arrow-light {
+  #container header #nav-desktop .menu-options .menu-option:nth-child(2):hover .arrow-light {
     transform: rotate(180deg);
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover .submenu-option {
+  #container header #nav-desktop .menu-options .menu-option:nth-child(3):hover .submenu-option {
     opacity: 1;
     pointer-events: all;
     top: 30px;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover .arrow-light {
+  #container header #nav-desktop .menu-options .menu-option:nth-child(3):hover .arrow-light {
     transform: rotate(180deg);
   }
   #container header #nav-desktop .buttons {
