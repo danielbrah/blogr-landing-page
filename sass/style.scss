@@ -598,7 +598,17 @@ $footer-text-color: hsl(240, 2%, 79%);
                             transition: opacity 250ms ease, top 250ms ease;
                             pointer-events: none;
                             border-radius: 6px;
-                            box-shadow: 0 8px 16px 5px hsla(0 0% 50% / 0.5);
+                            box-shadow: 0 8px 16px 5px hsla(0 0% 50% / 0.5); 
+                            span
+                            {
+                                cursor: pointer;
+                                font-weight: 400;
+                                transition: font-weight 100ms ease;
+                                &:hover
+                                {
+                                    font-weight: 700;
+                                }
+                            }
                         }
 
                         @for $i from 1 through 3
@@ -863,6 +873,36 @@ $footer-text-color: hsl(240, 2%, 79%);
                 .links
                 {
                     gap: 14px;
+
+                    p
+                    {
+                        position: relative; 
+                        width: -webkit-fit-content;
+                        width: -moz-fit-content;
+                        width: fit-content;
+                        cursor: pointer;
+                        
+                        &:hover::after
+                        {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+
+                    p::after
+                    {
+                        content: ' ';
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: $footer-text-color;
+                        border-radius: 8px;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 250ms ease;
+                    }
                 }
             }
         }
