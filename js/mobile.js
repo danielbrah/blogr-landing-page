@@ -1,5 +1,5 @@
 'use strict';
-let navSection = document.querySelector('nav')
+let navSectionMobile = document.getElementById('nav-mobile')
 let navMenu = document.querySelector('.nav-menu')
 let hamburgerOpen = document.getElementById('hamburger-open')
 let hamburgerClose = document.getElementById('hamburger-close')
@@ -7,13 +7,18 @@ let container = document.getElementById('container')
 let button = document.querySelectorAll('[id=menu-header]')
 let submenuOptions = document.querySelectorAll('[id=submenu-option]')
 let arrows = document.querySelectorAll('[id=arrow]')
+const attribution = document.querySelector('.attribution')
+attribution.style.setProperty('--attr-height-top', `${attribution.offsetHeight * -1}px`)
 
+setTimeout(() => {
+    document.body.removeChild(attribution)
+}, 5300)
 
 window.addEventListener('scroll', (event) =>{
     if (window.scrollY == 0 || window.scrollY < 0)
-        navSection.style.backgroundColor = 'transparent'
+        navSectionMobile.style.backgroundColor = 'transparent'
     else
-        navSection.style.backgroundColor = 'hsl(353, 100%, 62%)'
+        navSectionMobile.style.backgroundColor = 'hsl(353, 100%, 62%)'
 })
 
 hamburgerOpen.addEventListener("click", () => 
@@ -35,8 +40,10 @@ submenuOptions.forEach(function(div)
     div.style.setProperty('--height', `${45 * div.children.length}px`)
 })
 
+// Assigns each submenu an event listener
 button.forEach(function(btn, btnIndex)
 {
+    // When a submenu option is clicked on, this will execute.
     btn.addEventListener("click", () => 
     {
         submenuOptions.forEach(function(div, divIndex)

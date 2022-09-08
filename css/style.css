@@ -7,6 +7,7 @@
 
 :root {
   --height: 0px;
+  --attr-height-top: 0px;
 }
 
 .illustration-desktop {
@@ -38,7 +39,10 @@
 #container header .desktop-bkg {
   display: none;
 }
-#container header nav {
+#container header #nav-desktop {
+  display: none;
+}
+#container header #nav-mobile {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +55,7 @@
   z-index: 999;
   border-radius: 0 0 1.5em 1.5em;
 }
-#container header nav .nav-menu {
+#container header #nav-mobile .nav-menu {
   position: fixed;
   display: block;
   background: white;
@@ -69,35 +73,35 @@
   transition: opacity 250ms ease, visibility 250ms ease, top 250ms ease;
   padding: 2em 0;
 }
-#container header nav .nav-menu.active {
+#container header #nav-mobile .nav-menu.active {
   opacity: 1;
   visibility: visible;
   top: 110px;
 }
-#container header nav .nav-menu #menu-options {
+#container header #nav-mobile .nav-menu #menu-options {
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 1em;
 }
-#container header nav .nav-menu #menu-options #menu-header {
+#container header #nav-mobile .nav-menu #menu-options #menu-header {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
-#container header nav .nav-menu #menu-options #menu-header h1 {
+#container header #nav-mobile .nav-menu #menu-options #menu-header h1 {
   font-size: 18px;
   color: hsl(208deg, 49%, 24%);
 }
-#container header nav .nav-menu #menu-options #menu-header img {
+#container header #nav-mobile .nav-menu #menu-options #menu-header img {
   transform: rotate(0deg);
   transition: transform 250ms ease;
 }
-#container header nav .nav-menu #menu-options #menu-header img.active {
+#container header #nav-mobile .nav-menu #menu-options #menu-header img.active {
   transform: rotate(180deg);
 }
-#container header nav .nav-menu #menu-options #submenu-option {
+#container header #nav-mobile .nav-menu #menu-options #submenu-option {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,11 +118,11 @@
   transition: height 250ms ease, padding 250ms ease;
   color: hsl(207deg, 13%, 34%);
 }
-#container header nav .nav-menu #menu-options #submenu-option.active {
+#container header #nav-mobile .nav-menu #menu-options #submenu-option.active {
   height: var(--height);
   padding: 4.5em 0;
 }
-#container header nav .nav-menu #menu-options .buttons {
+#container header #nav-mobile .nav-menu #menu-options .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,38 +133,44 @@
   margin-top: 1em;
   width: 85%;
 }
-#container header nav .nav-menu #menu-options .buttons a {
+#container header #nav-mobile .nav-menu #menu-options .buttons a {
   text-decoration: none;
   color: hsl(208deg, 49%, 24%);
   font-weight: 600;
 }
-#container header nav .nav-menu #menu-options .buttons a:nth-child(2) {
+#container header #nav-mobile .nav-menu #menu-options .buttons a:nth-child(2) {
   color: white;
   background: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   padding: 0.7em 2em;
   border-radius: 32px;
 }
-#container header nav #hamburger-open {
+#container header #nav-mobile #hamburger-open {
   display: block;
   opacity: 1;
   visibility: 1;
   transition: opacity 250ms ease, visibility 250ms ease;
 }
-#container header nav #hamburger-open.active {
+#container header #nav-mobile #hamburger-open.active {
   display: none;
   opacity: 0;
   visibility: 0;
 }
-#container header nav #hamburger-close {
+#container header #nav-mobile #hamburger-close {
   display: none;
   opacity: 0;
   visibility: 0;
   transition: opacity 250ms ease, visibility 250ms ease;
 }
-#container header nav #hamburger-close.active {
+#container header #nav-mobile #hamburger-close.active {
   display: block;
   opacity: 1;
   visibility: 1;
+}
+#container header #message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 #container header #message h1, #container header #message p {
   text-align: center;
@@ -171,6 +181,10 @@
   font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 0.5em;
+  max-width: 14ch;
+}
+#container header #message p {
+  max-width: 22ch;
 }
 #container header #message #cta {
   display: flex;
@@ -382,6 +396,311 @@
   display: flex;
   flex-flow: column;
   gap: 8px;
+}
+
+.attribution {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 1em;
+  border-radius: 0 0 8px 8px;
+  z-index: 3;
+  background: white;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 12px 24px 2px hsla(0deg, 0%, 50%, 0.5);
+  animation: attribution-anim 250ms ease forwards;
+  animation-delay: 5s;
+}
+.attribution a {
+  color: black;
+}
+
+@media only screen and (min-width: 1298px) {
+  .illustration-desktop {
+    display: block;
+  }
+  .illustration-mobile {
+    display: none;
+  }
+  #container header {
+    background-image: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+    height: 575px;
+  }
+  #container header #nav-mobile {
+    display: none;
+  }
+  #container header #nav-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    gap: 2.5em;
+    padding: 3em 9.5em 3em 9.5em;
+    border-radius: 0 0 1.5em 1.5em;
+    transition: background-color 150ms ease;
+  }
+  #container header #nav-desktop #menu-options {
+    display: flex;
+    gap: 2em;
+    flex: 1;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    margin-left: 1em;
+  }
+  #container header #nav-desktop #menu-options .menu-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+    padding: 8px 0;
+  }
+  #container header #nav-desktop #menu-options .menu-option h1 {
+    font-size: 15px;
+    cursor: default;
+  }
+  #container header #nav-desktop #menu-options .menu-option #arrow {
+    transform: rotate(0deg);
+    transition: transform 250ms ease;
+  }
+  #container header #nav-desktop #menu-options .menu-option #submenu-option {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    background: white;
+    color: hsl(208deg, 49%, 24%);
+    position: absolute;
+    top: 25px;
+    margin-top: 5px;
+    padding: 2em 4em 2em 1.5em;
+    font-family: "Ubuntu", sans-serif;
+    left: -25px;
+    opacity: 0;
+    transition: opacity 250ms ease, top 250ms ease;
+    pointer-events: none;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 5px hsla(0deg, 0%, 50%, 0.5);
+  }
+  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover #submenu-option {
+    opacity: 1;
+    pointer-events: all;
+    top: 30px;
+  }
+  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover #arrow {
+    transform: rotate(180deg);
+  }
+  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover #submenu-option {
+    opacity: 1;
+    pointer-events: all;
+    top: 30px;
+  }
+  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover #arrow {
+    transform: rotate(180deg);
+  }
+  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover #submenu-option {
+    opacity: 1;
+    pointer-events: all;
+    top: 30px;
+  }
+  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover #arrow {
+    transform: rotate(180deg);
+  }
+  #container header #nav-desktop .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    flex-flow: row;
+    gap: 2.5em;
+    width: 85%;
+    font-family: "Ubuntu", sans-serif;
+  }
+  #container header #nav-desktop .buttons a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  #container header #nav-desktop .buttons a:nth-child(2) {
+    color: hsl(356deg, 100%, 66%);
+    background: white;
+    padding: 1em 2.6em;
+    border-radius: 32px;
+    transition: background 250ms ease, color 250ms ease;
+  }
+  #container header #nav-desktop .buttons a:nth-child(2):hover {
+    background: hsl(355deg, 100%, 74%);
+    color: white;
+  }
+  #container header #message {
+    gap: 0;
+  }
+  #container header #message h1 {
+    margin-bottom: 0.2em;
+    max-width: 22ch;
+    font-size: 58px;
+  }
+  #container header #message p {
+    max-width: 34ch;
+    font-size: 20px;
+  }
+  #container header #message #cta {
+    margin-top: 1.5em;
+  }
+  #container header .desktop-bkg {
+    display: block;
+    position: absolute;
+    top: -1360px;
+    left: -430px;
+    z-index: -1;
+  }
+  #container header .mobile-bkg {
+    display: none;
+  }
+  #container #first__section {
+    height: 1010px;
+    padding: 8em 0;
+    gap: 0;
+    overflow: hidden;
+  }
+  #container #first__section #first__section__heading {
+    font-size: 40px;
+  }
+  #container #first__section #first__section__body {
+    flex: 1;
+    flex-flow: row-reverse;
+    justify-content: center;
+  }
+  #container #first__section #first__section__body #illustration-editor-container {
+    position: relative;
+    flex: 1;
+    height: 100%;
+  }
+  #container #first__section #first__section__body #illustration-editor-container img {
+    position: absolute;
+    right: -275px;
+    top: -100px;
+  }
+  #container #first__section #first__section__body #first__section__body__text {
+    flex: 1;
+    gap: 3em;
+    align-items: center;
+    padding-left: 5em;
+  }
+  #container #first__section #first__section__body #first__section__body__text .body__text {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    gap: 1em;
+    text-align: left;
+  }
+  #container #first__section #first__section__body #first__section__body__text .body__text h2 {
+    max-width: none;
+    font-size: 28px;
+  }
+  #container #first__section #first__section__body #first__section__body__text .body__text p {
+    max-width: 50ch;
+    line-height: 1.6;
+    font-size: 18px;
+  }
+  #container #second__section {
+    flex-flow: row;
+    height: 400px;
+  }
+  #container #second__section #phone-illustration {
+    top: -62px;
+    left: 7%;
+  }
+  #container #second__section #bg-circle-pattern-container {
+    display: block;
+  }
+  #container #second__section #bg-circle-pattern-container #bg-circle-pattern {
+    position: absolute;
+    top: -520px;
+    left: -225px;
+    width: 1000px;
+    height: 1004px;
+  }
+  #container #second__section #second__section__body__text {
+    text-align: left;
+    margin-left: 33%;
+  }
+  #container #second__section #second__section__body__text .body__text {
+    padding-top: 0;
+    align-items: flex-start;
+  }
+  #container #second__section #second__section__body__text .body__text h2 {
+    max-width: 75ch;
+    color: white;
+    font-weight: 300;
+    font-size: 40px;
+  }
+  #container #second__section #second__section__body__text .body__text p {
+    max-width: 50ch;
+    line-height: 1.6;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  #container #third__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 1025px;
+    overflow: hidden;
+  }
+  #container #third__section #third__section__body {
+    flex-flow: row;
+  }
+  #container #third__section #third__section__body #illustration-laptop-container {
+    width: 720px;
+  }
+  #container #third__section #third__section__body #illustration-laptop-container img {
+    position: relative;
+    left: -265px;
+  }
+  #container #third__section #third__section__body #third__section__body__text {
+    text-align: left;
+    width: 720px;
+  }
+  #container #third__section #third__section__body #third__section__body__text .body__text {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #container #third__section #third__section__body #third__section__body__text .body__text h2 {
+    max-width: 50ch;
+  }
+  #container #third__section #third__section__body #third__section__body__text .body__text p {
+    max-width: 50ch;
+  }
+  #container footer {
+    height: 359px;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 0;
+    align-items: flex-start;
+    padding: 5em 20em 5em 12em;
+  }
+  #container footer h1, #container footer p {
+    text-align: left;
+    font-size: 16px;
+  }
+  #container footer .footer__section .links {
+    gap: 14px;
+  }
+}
+@keyframes attribution-anim {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: var(--attr-height-top);
+    box-shadow: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
