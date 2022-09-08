@@ -4,9 +4,9 @@ let navMenu = document.querySelector('.nav-menu')
 let hamburgerOpen = document.getElementById('hamburger-open')
 let hamburgerClose = document.getElementById('hamburger-close')
 let container = document.getElementById('container')
-let button = document.querySelectorAll('[id=menu-header]')
-let submenuOptions = document.querySelectorAll('[id=submenu-option]')
-let arrows = document.querySelectorAll('[id=arrow]')
+let button = document.querySelectorAll('.menu-header')
+let submenuOptions = document.querySelectorAll('.submenu-option')
+let arrows = document.querySelectorAll('.arrow')
 const attribution = document.querySelector('.attribution')
 
 setTimeout(() => {

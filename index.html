@@ -6,11 +6,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Blogr</title>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 <body>
 
@@ -18,16 +13,16 @@
     <header>
       <!-- MOBILE NAV MENU -->
       <nav id="nav-mobile">
-        <img src="images/logo.svg" alt="Image of logo" width="80px">
+        <img src="images/logo.svg" alt="Image of logo" width="80">
         <img src="images/icon-hamburger.svg" alt="Hamburger icon" id="hamburger-open" >
         <img src="images/icon-close.svg" alt="Hamburger icon" id="hamburger-close">
         <ul class="nav-menu">
           <div id="menu-options">
-            <div id="menu-header">
+            <div class="menu-header">
               <h1>Product</h1>
-              <img id="arrow" src="images/icon-arrow-dark.svg" alt="Menu arrow icon">
+              <img class="arrow" src="images/icon-arrow-dark.svg" alt="Menu arrow icon">
             </div>
-            <div id="submenu-option">
+            <div class="submenu-option"">
               <span>Overview</span>
               <span>Pricing</span>
               <span>Marketplace</span>
@@ -35,22 +30,22 @@
               <span>Integrations</span>
             </div>
           
-            <div id="menu-header">
+            <div class="menu-header">
               <h1>Company</h1>
-              <img id="arrow" src="images/icon-arrow-dark.svg" alt="Menu arrow icon">
+              <img class="arrow" src="images/icon-arrow-dark.svg" alt="Menu arrow icon">
             </div>
-            <div id="submenu-option">
+            <div class="submenu-option"">
               <span>About</span>
               <span>Team</span>
               <span>Blog</span>
               <span>Careers</span>
             </div>
 
-            <div id="menu-header">
+            <div class="menu-header">
               <h1>Connect</h1>
-              <img id="arrow" src="images/icon-arrow-dark.svg" alt="Menu arrow icon">
+              <img class="arrow" src="images/icon-arrow-dark.svg" alt="Menu arrow icon">
             </div>
-            <div id="submenu-option">
+            <div class="submenu-option"">
               <span>Contact</span>
               <span>Newsletter</span>
               <span>LinkedIn</span>
@@ -67,13 +62,13 @@
 
       <!-- DESKTOP NAV MENU -->
       <nav id="nav-desktop">
-        <img src="images/logo.svg" alt="Image of logo" width="80px">
+        <img src="images/logo.svg" alt="Image of logo" width="80">
 
         <div id="menu-options">
           <div class="menu-option">
             <h1>Product</h1>
-            <img id="arrow" src="images/icon-arrow-light.svg" alt="Menu arrow icon">
-            <div id="submenu-option">
+            <img class="arrow-light" src="images/icon-arrow-light.svg" alt="Menu arrow icon">
+            <div class="submenu-option"">
               <span>Overview</span>
               <span>Pricing</span>
               <span>Marketplace</span>
@@ -84,8 +79,8 @@
         
           <div class="menu-option">
             <h1>Company</h1>
-            <img id="arrow" src="images/icon-arrow-light.svg" alt="Menu arrow icon">
-            <div id="submenu-option">
+            <img class="arrow-light" src="images/icon-arrow-light.svg" alt="Menu arrow icon">
+            <div class="submenu-option"">
               <span>About</span>
               <span>Team</span>
               <span>Blog</span>
@@ -95,8 +90,8 @@
 
           <div class="menu-option">
             <h1>Connect</h1>
-            <img id="arrow" src="images/icon-arrow-light.svg" alt="Menu arrow icon">
-            <div id="submenu-option">
+            <img class="arrow-light" src="images/icon-arrow-light.svg" alt="Menu arrow icon">
+            <div class="submenu-option"">
               <span>Contact</span>
               <span>Newsletter</span>
               <span>LinkedIn</span>
@@ -124,14 +119,12 @@
       <img src="images/bg-pattern-intro-desktop.svg" alt="Background pattern" class="desktop-bkg">
     </header>
 
-    <!--------------------------->
     <!------ FIRST SECTION ------>
-    <!--------------------------->
     <section id="first__section">
       <h2 id="first__section__heading">Designed for the future</h2>
 
       <div id="first__section__body">
-        <img src="images/illustration-editor-mobile.svg" alt="Mobile editor illustration" class="illustration-mobile" width="375px">
+        <img src="images/illustration-editor-mobile.svg" alt="Mobile editor illustration" class="illustration-mobile" width="375">
 
         <div id="illustration-editor-container">
         <img src="images/illustration-editor-desktop.svg" alt="Desktop editor illustration" class="illustration-desktop">
@@ -161,12 +154,10 @@
       </div>
     </section>
 
-    <!---------------------------->
     <!------ SECOND SECTION ------>
-    <!---------------------------->
     <section id="second__section">
-      <img src="images/illustration-phones.svg" alt="Illustration of phones" id="phone-illustration" class="illustration-mobile" width="375px">
-      <img src="images/illustration-phones.svg" alt="Illustration of phones" id="phone-illustration" class="illustration-desktop" width="540px">
+      <img src="images/illustration-phones.svg" alt="Illustration of phones" class="phone-illustration" class="illustration-mobile" width="375">
+      <img src="images/illustration-phones.svg" alt="Illustration of phones" class="phone-illustration" class="illustration-desktop" width="540">
       <div id="bg-circle-pattern-container">
         <img src="images/bg-pattern-circles.svg" alt="Pattern circles background" id="bg-circle-pattern">
       </div>
@@ -181,9 +172,7 @@
       </div>
     </section>
 
-    <!---------------------------->
     <!------ THIRD SECTION ------>
-    <!---------------------------->
   
     <section id="third__section">
       <div id="third__section__body">

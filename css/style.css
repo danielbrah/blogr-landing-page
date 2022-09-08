@@ -83,24 +83,24 @@
   align-items: center;
   gap: 1em;
 }
-#container header #nav-mobile .nav-menu #menu-options #menu-header {
+#container header #nav-mobile .nav-menu #menu-options .menu-header {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
-#container header #nav-mobile .nav-menu #menu-options #menu-header h1 {
+#container header #nav-mobile .nav-menu #menu-options .menu-header h1 {
   font-size: 18px;
   color: hsl(208deg, 49%, 24%);
 }
-#container header #nav-mobile .nav-menu #menu-options #menu-header img {
+#container header #nav-mobile .nav-menu #menu-options .menu-header img {
   transform: rotate(0deg);
   transition: transform 250ms ease;
 }
-#container header #nav-mobile .nav-menu #menu-options #menu-header img.active {
+#container header #nav-mobile .nav-menu #menu-options .menu-header img.active {
   transform: rotate(180deg);
 }
-#container header #nav-mobile .nav-menu #menu-options #submenu-option {
+#container header #nav-mobile .nav-menu #menu-options .submenu-option {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +117,7 @@
   transition: height 250ms ease, padding 250ms ease;
   color: hsl(207deg, 13%, 34%);
 }
-#container header #nav-mobile .nav-menu #menu-options #submenu-option.active {
+#container header #nav-mobile .nav-menu #menu-options .submenu-option.active {
   height: var(--height);
   padding: 4.5em 0;
 }
@@ -279,7 +279,7 @@
   border-radius: 0 6em 0 6em;
   z-index: 1;
 }
-#container #second__section #phone-illustration {
+#container #second__section .phone-illustration {
   position: absolute;
   top: -185px;
   max-width: 100%;
@@ -468,11 +468,11 @@
     font-size: 15px;
     cursor: default;
   }
-  #container header #nav-desktop #menu-options .menu-option #arrow {
+  #container header #nav-desktop #menu-options .menu-option .arrow-light {
     transform: rotate(0deg);
     transition: transform 250ms ease;
   }
-  #container header #nav-desktop #menu-options .menu-option #submenu-option {
+  #container header #nav-desktop #menu-options .menu-option .submenu-option {
     display: flex;
     flex-flow: column;
     gap: 1em;
@@ -490,36 +490,36 @@
     border-radius: 6px;
     box-shadow: 0 8px 16px 5px hsla(0deg, 0%, 50%, 0.5);
   }
-  #container header #nav-desktop #menu-options .menu-option #submenu-option span {
+  #container header #nav-desktop #menu-options .menu-option .submenu-option span {
     cursor: pointer;
     font-weight: 400;
     transition: font-weight 100ms ease;
   }
-  #container header #nav-desktop #menu-options .menu-option #submenu-option span:hover {
+  #container header #nav-desktop #menu-options .menu-option .submenu-option span:hover {
     font-weight: 700;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover #submenu-option {
+  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover .submenu-option {
     opacity: 1;
     pointer-events: all;
     top: 30px;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover #arrow {
+  #container header #nav-desktop #menu-options .menu-option:nth-child(1):hover .arrow-light {
     transform: rotate(180deg);
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover #submenu-option {
+  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover .submenu-option {
     opacity: 1;
     pointer-events: all;
     top: 30px;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover #arrow {
+  #container header #nav-desktop #menu-options .menu-option:nth-child(2):hover .arrow-light {
     transform: rotate(180deg);
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover #submenu-option {
+  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover .submenu-option {
     opacity: 1;
     pointer-events: all;
     top: 30px;
   }
-  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover #arrow {
+  #container header #nav-desktop #menu-options .menu-option:nth-child(3):hover .arrow-light {
     transform: rotate(180deg);
   }
   #container header #nav-desktop .buttons {
@@ -623,7 +623,7 @@
     flex-flow: row;
     height: 400px;
   }
-  #container #second__section #phone-illustration {
+  #container #second__section .phone-illustration {
     top: -62px;
     left: 7%;
   }

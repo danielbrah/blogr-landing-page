@@ -111,7 +111,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                     align-items: center;
                     gap: 1em;
 
-                    #menu-header
+                    .menu-header
                     {
                         @include center;
                         gap: 5px;
@@ -133,7 +133,7 @@ $footer-text-color: hsl(240, 2%, 79%);
                         }
                     }
 
-                    #submenu-option
+                    .submenu-option
                     {
                         @include center;
                         flex-flow: column;
@@ -356,7 +356,7 @@ $footer-text-color: hsl(240, 2%, 79%);
         border-radius: 0 6em 0 6em;
         z-index: 1;
 
-        #phone-illustration
+        .phone-illustration
         {
             position: absolute;
             top: -185px;
@@ -575,13 +575,13 @@ $footer-text-color: hsl(240, 2%, 79%);
                             cursor: default;
                         }
 
-                        #arrow
+                        .arrow-light
                         {
                             transform: rotate(0deg);
                             transition: transform 250ms ease;
                         }
 
-                        #submenu-option
+                        .submenu-option
                         {
                             display: flex;
                             flex-flow: column;
@@ -613,14 +613,14 @@ $footer-text-color: hsl(240, 2%, 79%);
 
                         @for $i from 1 through 3
                         {
-                            &:nth-child(#{$i}):hover #submenu-option
+                            &:nth-child(#{$i}):hover .submenu-option
                             {
                                 opacity: 1;
                                 pointer-events: all;
                                 top: 30px;
                             }
 
-                            &:nth-child(#{$i}):hover #arrow
+                            &:nth-child(#{$i}):hover .arrow-light
                             {
                                 transform: rotate(180deg);
                             }
@@ -760,7 +760,7 @@ $footer-text-color: hsl(240, 2%, 79%);
         {
             flex-flow: row;
             height: 400px;
-            #phone-illustration
+            .phone-illustration
             {
                 top: -62px;
                 left: 7%;
