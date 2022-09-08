@@ -415,8 +415,7 @@
   width: 25ch;
   height: 92px;
   box-shadow: 0 12px 24px 2px hsla(0deg, 0%, 50%, 0.5);
-  animation: attribution-anim 250ms ease forwards;
-  animation-delay: 5s;
+  animation: attr-fade-in 250ms ease forwards, attr-fade-out 250ms 5.25s ease forwards;
 }
 .attribution a {
   color: black;
@@ -730,13 +729,25 @@
     transition: transform 250ms ease;
   }
 }
-@keyframes attribution-anim {
+@keyframes attr-fade-in {
   0% {
-    top: 0;
+    opacity: 0;
+    top: -10px;
   }
   100% {
-    top: -92px;
-    box-shadow: none;
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes attr-fade-out {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -10px;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

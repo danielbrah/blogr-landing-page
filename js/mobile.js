@@ -11,7 +11,7 @@ const attribution = document.querySelector('.attribution')
 
 setTimeout(() => {
     document.body.removeChild(attribution)
-}, 5300)
+}, 5350)
 
 window.addEventListener('scroll', (event) =>{
     if (window.scrollY == 0 || window.scrollY < 0)
