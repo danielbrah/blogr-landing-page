@@ -8,7 +8,6 @@ let button = document.querySelectorAll('[id=menu-header]')
 let submenuOptions = document.querySelectorAll('[id=submenu-option]')
 let arrows = document.querySelectorAll('[id=arrow]')
 const attribution = document.querySelector('.attribution')
-attribution.style.setProperty('--attr-height-top', `${attribution.offsetHeight * -1}px`)
 
 setTimeout(() => {
     document.body.removeChild(attribution)

@@ -7,7 +7,6 @@
 
 :root {
   --height: 0px;
-  --attr-height-top: 0px;
 }
 
 .illustration-desktop {
@@ -399,6 +398,10 @@
 }
 
 .attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
   position: fixed;
   top: 0;
   left: 50%;
@@ -409,6 +412,8 @@
   background: white;
   font-family: "Overpass", sans-serif;
   font-weight: 600;
+  width: 25ch;
+  height: 92px;
   box-shadow: 0 12px 24px 2px hsla(0deg, 0%, 50%, 0.5);
   animation: attribution-anim 250ms ease forwards;
   animation-delay: 5s;
@@ -698,7 +703,7 @@
     top: 0;
   }
   100% {
-    top: var(--attr-height-top);
+    top: -92px;
     box-shadow: none;
   }
 }
